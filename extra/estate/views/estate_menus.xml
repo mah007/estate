@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="estate_root" name="Real Estate" sequence="1"/>
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="properties_categ" name="Properties" parent="estate_root" sequence="1"/>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="properties" name="Properties" parent="properties_categ" action="estate_property_action" sequence="1"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="property_type_categ" name="Property Type" parent="estate_root" sequence="2"/>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="property_types" name="Types" parent="property_type_categ" action="estate_property_type_action" sequence="2"/>
+    </data>
+</odoo>
